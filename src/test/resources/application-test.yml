@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb;init=create schema if not exists MCDBO
+eureka:
+  client:
+    enabled: false
+service:
+  approval: '//approval-service/v1/approval/'
