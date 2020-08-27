@@ -89,7 +89,7 @@ public class CreditCardServiceImpl implements CreditCardService{
 	}
 
 	/**
-	 * To find creditcardrequest by requestId
+	 * To find request by requestId
 	 * @param applicationId/requestId
 	 * @return CreditCardRequest
 	 */
