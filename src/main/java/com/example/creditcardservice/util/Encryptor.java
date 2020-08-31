@@ -28,6 +28,11 @@ public class Encryptor {
         cipher = Cipher.getInstance(AES);
 	}
 	
+	/**
+	 * Encrypts given value
+	 * @param value
+	 * @return encrypted value
+	 */
 	public String encryptColumn(String value) {
 		try {
             cipher.init(Cipher.ENCRYPT_MODE, key);
@@ -37,6 +42,11 @@ public class Encryptor {
         }
 	}
 	
+	/**
+	 * Decrypts given value
+	 * @param dbData
+	 * @return decrypted value
+	 */
 	public String decryptColumn(String dbData) {
 		try {
             cipher.init(Cipher.DECRYPT_MODE, key);

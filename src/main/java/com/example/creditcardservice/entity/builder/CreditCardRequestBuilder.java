@@ -23,6 +23,11 @@ public class CreditCardRequestBuilder {
 		this.modelMapper = modelMapper;
 	}
 
+	/**
+	 * builds creditcard request entity
+	 * @param requestDto
+	 * @return CreditCardRequest
+	 */
 	public  CreditCardRequest buildRequest(CreditCardRequestDTO requestDto) {
 		CreditCardRequest request = modelMapper.map(requestDto, CreditCardRequest.class);
 		request.setStatus("RECEIVED");

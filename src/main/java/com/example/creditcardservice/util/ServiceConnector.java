@@ -19,10 +19,25 @@ public class ServiceConnector {
 		this.restTemplate = restTemplate;
 	}
 	
+	/**
+	 * Generic method for HTTP post request
+	 * @param <T>
+	 * @param url
+	 * @param request
+	 * @param responseType
+	 * @return T
+	 */
 	public <T> T post(String url, Object request, Class<T> responseType) {
 		return restTemplate.postForObject(url, request, responseType);
 	}
 	
+	/**
+	 * Generic method for HTTP get request
+	 * @param <T>
+	 * @param url
+	 * @param responseType
+	 * @return T
+	 */
 	public <T> T get(String url, Class<T> responseType) {
 		return restTemplate.getForObject(url, responseType);
 	}

@@ -112,6 +112,7 @@ public class CreditCardServiceImpl implements CreditCardService{
 	 */
 	@Override
 	public ServiceResponse<String> updateRequestState(String requestId, String status) {
+		log.info("Updating status for [{}]", requestId);
 		Optional<CreditCardRequest> optionalRequest = creditCardRepository.findById(requestId);
 		if(optionalRequest.isPresent()) {
 			CreditCardRequest request = optionalRequest.get();
